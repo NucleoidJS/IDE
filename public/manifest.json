@@ -1,3 +1,21 @@
 {
-  "name": "Nucleoid IDE"
+  "name": "Nucleoid IDE",
+  "short_name": "Nucleoid IDE",
+  "icons": [
+    {
+      "src": "https://cdn.nucleoid.com/media/icon.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "theme_color": "#323a40",
+  "background_color": "#323a40"
 }
