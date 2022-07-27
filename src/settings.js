@@ -44,11 +44,25 @@ const Settings = {
       return localStorage.getItem("beta") === "true";
     }
   },
+  debug: (status) => {
+    if (status !== undefined && status !== null) {
+      localStorage.setItem("debug", status);
+    } else {
+      return localStorage.getItem("debug") === "true";
+    }
+  },
   runtime: (data) => {
     if (data !== undefined && data !== null) {
       localStorage.setItem("runtime", data);
     } else {
       return localStorage.getItem("runtime");
+    }
+  },
+  description: (data) => {
+    if (data !== undefined && data !== null) {
+      localStorage.setItem("description", data);
+    } else {
+      return localStorage.getItem("description");
     }
   },
   landing: (data) => {

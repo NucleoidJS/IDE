@@ -8,6 +8,7 @@ import Logs from "./pages/ide/Logs";
 import Mobile from "./pages/ide/Mobile";
 import Query from "./pages/ide/Query";
 import React from "react";
+import Settings from "./settings";
 import theme from "./theme";
 
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
@@ -20,6 +21,10 @@ import {
 
 function App() {
   const matchDownSM = useMediaQuery(theme.breakpoints.down("sm"));
+
+  if (Settings.debug()) {
+    console.debug = {};
+  }
 
   React.useEffect(() => {
     const elapsed = Date.now() - window.start;

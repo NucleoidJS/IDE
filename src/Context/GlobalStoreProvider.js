@@ -25,17 +25,22 @@ const InitContext = () => {
     Settings.beta(false);
   }
 
-  /*
-  if (!Settings.runtime()) {
-    Settings.runtime("sandbox");
+  if (!Settings.debug()) {
+    Settings.debug(false);
   }
-*/
+
   if (!Settings.url.app()) {
     Settings.url.app("http://localhost:3000/");
   }
 
   if (!Settings.url.terminal()) {
     Settings.url.terminal("http://localhost:8448/");
+  }
+
+  if (!Settings.description()) {
+    Settings.description(
+      "Nucleoid low-code framework lets you build your APIs with the help of AI and built-in datastore"
+    );
   }
 
   if (!Settings.landing()) {

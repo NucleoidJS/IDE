@@ -1,9 +1,9 @@
-import SettingsDialogAdvanced from "../SettingsDialogAdvanced";
+import SettingsDialogDev from "../SettingsDialogDev";
 import SettingsDialogUrl from "../SettingsDialogUrl";
 
 import TabPanel from "../TabPanel";
 import styles from "./styles";
-import { Grid, Tab, Tabs } from "@mui/material";
+import { Box, Grid, Tab, Tabs } from "@mui/material";
 import React, { forwardRef, useState } from "react";
 
 const SettingsDialogTabs = forwardRef((props, urlRef) => {
@@ -30,14 +30,16 @@ const SettingsDialogTabs = forwardRef((props, urlRef) => {
         sx={styles.tabs}
       >
         <Tab sx={styles.tab} label="Runtime" {...tabProps(0)} />
-        <Tab sx={styles.tab} label="Advanced" {...tabProps(1)} />
+        <Tab sx={styles.tab} label="Dev" {...tabProps(1)} />
       </Tabs>
-      <TabPanel value={value} index={0}>
-        <SettingsDialogUrl ref={urlRef} />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <SettingsDialogAdvanced />
-      </TabPanel>
+      <Box sx={{ width: "100%" }}>
+        <TabPanel value={value} index={0}>
+          <SettingsDialogUrl ref={urlRef} />
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+          <SettingsDialogDev />
+        </TabPanel>
+      </Box>
     </Grid>
   );
 });

@@ -118,7 +118,7 @@ export default function CodeSandboxDialog({ open, handleCloseSandboxDialog }) {
               >
                 <Switch
                   value={npx}
-                  color="default"
+                  color="secondary"
                   onChange={(e) => {
                     setNpx(e.target.checked);
                     setAlert(e.target.checked);

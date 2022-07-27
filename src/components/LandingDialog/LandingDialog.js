@@ -6,7 +6,7 @@ import React from "react";
 import codeImage from "../../images/code.png";
 import onboardDispatcher from "../Onboard/onboardDispatcher";
 import styles from "./styles";
-import theme from "../../theme";
+import theme from "theme";
 import {
   Avatar,
   Box,
@@ -33,7 +33,7 @@ const LandingDialog = () => {
       sx={styles.dialog}
       PaperProps={{
         style: {
-          backgroundColor: theme.palette.custom.darkDialogPanel,
+          backgroundColor: theme.palette.custom.darkDialog,
           color: theme.palette.custom.grey,
         },
       }}

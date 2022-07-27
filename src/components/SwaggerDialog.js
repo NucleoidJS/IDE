@@ -97,7 +97,7 @@ export default function SwaggerDialog({ open, handleClose }) {
 
               <Switch
                 checked={sandbox}
-                color="default"
+                color="secondary"
                 onChange={(e) => {
                   setSandbox(e.target.checked);
                 }}

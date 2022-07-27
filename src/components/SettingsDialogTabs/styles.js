@@ -5,6 +5,9 @@ const styles = {
     height: 400,
   },
   tabs: {
+    width: 120,
+    display: "flex",
+    flexDirection: "flex-end",
     borderRight: 1,
     borderColor: "divider",
     "& .MuiTabs-indicator": {
@@ -12,6 +15,12 @@ const styles = {
       height: 3,
     },
     "& .MuiTab-root.Mui-selected": {
+      color: "custom.grey",
+      bgcolor: "rgba(0,0,0,0.1)",
+      borderTopLeftRadius: 8,
+      borderBottomLeftRadius: 8,
+    },
+    "& .MuiTab-root": {
       color: "custom.grey",
     },
   },
